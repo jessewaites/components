@@ -7,8 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div id="wrapper">
+      
+      <!-- Sidebar -->
+      
+          
+      <!-- Page content -->
+      <div id="page-content-wrapper">
+        <div class="content-header">	
+<%= render'layouts/navigation' %>	
+<div class="page-content inset">
 <%= yield %>
+</div>
+        </div>
+      
+      </div>
 
 </body>
     <!-- Bootstrap core JavaScript -->

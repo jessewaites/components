@@ -1,0 +1,16 @@
+<h1>Listing fonts</h1>
+
+    <% @fonts.each do |font| %>
+      <article>
+        <h2><%= font.fontnames %></h2>
+        <p><%= font.description %></p>
+        <p><%= font.html %></p>
+        <p><%= font.css %></p>
+        <p><%= link_to 'Show', font %></p>
+        <!-- <p><%= link_to 'Edit', edit_font_path(font) %></p>
+        <p><%= link_to 'Destroy', font, method: :delete, data: { confirm: 'Are you sure?' } %></p> -->    
+    <% end %>
+  </article>
+<br>
+
+<%= link_to 'New Font', new_font_path %>

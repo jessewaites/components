@@ -1,0 +1,23 @@
+<p id><%= notice %></p>
+<h1>
+  <strong><%= @font.fontnames %></strong>
+</h1>
+
+<h3>
+  <%= @font.description %>
+</h3>
+
+<pre>31 <i class="icon-thumbs-up icon-2x"></i> ~ 5 <i class="icon-thumbs-down icon-2x"></i></pre>
+
+<p>
+  <strong>Html:</strong>
+  <%= raw Pygments.highlight(@font.html) %>  
+</p>
+
+<p>
+  <strong>Css:</strong>
+  <%= raw Pygments.highlight(@font.css) %>
+</p>
+
+<%= link_to 'Edit', edit_font_path(@font) %> |
+<%= link_to 'Back', fonts_path %>

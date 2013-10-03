@@ -1,4 +1,6 @@
 Components::Application.routes.draw do
+  resources :fonts
+
   get "static/home"
   get "static/about"
   get "static/contact"
