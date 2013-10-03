@@ -8,20 +8,14 @@
 </head>
 <body>
 <div id="wrapper">
-      
-      <!-- Sidebar -->
-      
-          
-      <!-- Page content -->
-      <div id="page-content-wrapper">
-        <div class="content-header">	
+      	
 <%= render'layouts/navigation' %>	
 <div class="page-content inset">
 <%= yield %>
 </div>
-        </div>
+</div>
       
-      </div>
+</div>
 
 </body>
     <!-- Bootstrap core JavaScript -->
@@ -35,4 +29,6 @@
         $("#wrapper").toggleClass("active");
     });
     </script>
+    <link href="http://fonts.googleapis.com/css?family=Abel|Medula+One" rel="stylesheet" type="text/css" />
+
 </html>

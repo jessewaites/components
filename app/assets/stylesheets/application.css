@@ -75,11 +75,12 @@
   height: 65px;
   line-height: 60px;
   font-size: 18px;
-  text-decoration: bold;
+  font-weight: bold;
 }
 
 .sidebar-nav > .sidebar-brand a {
-  color: #999999;
+  color: #fff;
+  text-decoration: strong;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -94,7 +95,7 @@
 
 .content-header h1 {
   margin: 0;
-  margin-left: 20px;
+  margin-left: 0px;
   line-height: 65px;
   display: inline-block;
 }

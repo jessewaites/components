@@ -3,19 +3,18 @@
   <strong><%= @font.fontnames %></strong>
 </h1>
 
-<h3>
+<p>
   <%= @font.description %>
-</h3>
-
+</p>
 <pre>31 <i class="icon-thumbs-up icon-2x"></i> ~ 5 <i class="icon-thumbs-down icon-2x"></i></pre>
 
 <p>
-  <strong>Html:</strong>
+  <strong>HTML:</strong>
   <%= raw Pygments.highlight(@font.html) %>  
 </p>
 
 <p>
-  <strong>Css:</strong>
+  <strong>CSS:</strong>
   <%= raw Pygments.highlight(@font.css) %>
 </p>
 
