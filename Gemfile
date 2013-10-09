@@ -29,7 +29,12 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'font-awesome-rails'
 
+gem 'omniauth-twitter'
+
+gem 'multi_json', '~> 1.7.8'
+
 require 'pygments.rb'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -38,6 +43,8 @@ end
 
 group :development, :test do 
   gem 'rspec-rails', '2.13.1'
+  gem 'capybara', '2.1.0'
+  #gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end  
 
 group :production do

@@ -11,13 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131003021451) do
+ActiveRecord::Schema.define(version: 20131009045834) do
 
   create_table "fonts", force: true do |t|
     t.string   "fontnames"
     t.text     "description"
     t.string   "html"
     t.text     "css"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "location"
+    t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
