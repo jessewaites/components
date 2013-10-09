@@ -6,7 +6,7 @@ h1, h2 {
     margin: 0 0 23px 0;
     margin-top: -35px;
     }
-p, ol, ul, td, h3  {
+p, b, ol, ul, td, h3  {
     font-family: 'Abel', sans-serif;
     font-size: 17px;
     line-height: 23px;
@@ -28,6 +28,10 @@ a {
     color: #fff;
     background-color: #000;
   }
+}
+
+body {
+  color: #8D8D8D;
 }
 
 div {
