@@ -2,20 +2,17 @@
   <ul class="sidebar-nav">
     <li class="sidebar-brand"><a href="#"><i class="icon-code"></i>COMPONENTS</a></li>
     <li><a href="#">Fonts</a></li>
-    <li><a href="#">Foundation 4</a></li>
-    <li><a href="#">Bootstrap 2</a></li>
-    <li><a href="#">Bootstrap 3</a></li>
+    <li><a href="#">Foundation</a></li>
+    <li><a href="#">Bootstrap</a></li>
+    <li><a href="#">Javascripts</a></li>
     <li><a href="#">Submit</a></li>          
     <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
-    <!-- <br>
-    <li><a href="#">Sign Out <i class="icon-twitter"></i></a></li> -->
     <br> 
     <% if current_user.present? %>
     <br>
     <li><i class="icon-twitter"></i><%= link_to "Sign Out", signout_path %>
   <li><img src= <%=current_user.image %>  />    <i class="icon-user"></i></li>
-  <li>@<%= current_user.name %></li>
+  <li><%= link_to("View Profile", user_path(current_user)) %></li>
   <li><%= current_user.location %></li> 
   <% else %>
   <br>

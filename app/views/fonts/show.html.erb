@@ -1,12 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Components</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <style>
+<%= @font.html %>
+<%= @font.css %>
 <p id><%= notice %></p>
+</style>
+</head>
 
+<style>
+<%= @font.html %>
+<%= @font.css %>
+<p id><%= notice %></p>
+</style>
 <h1>
   <strong><%= @font.fontnames %></strong>
 </h1>
 <p>
   <%= @font.description %>
 </p>
-<pre>31 <i class="icon-thumbs-up icon-2x"></i> ~ 5 <i class="icon-thumbs-down icon-2x"></i></pre>
+<pre><span class="badge">42 </span><i class="icon-heart icon-2x"></i> ~ 5 <i class="icon-thumbs-down icon-2x"></i></pre>
 
 <p>
   <strong>HTML:</strong>

@@ -1,5 +1,6 @@
 Components::Application.routes.draw do
   resources :fonts
+  resources :users
   root "static#home"
   get "static/home"
   get "static/about"
@@ -10,6 +11,9 @@ Components::Application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'auth/twitter/callback', to: 'sessions#create'
   get 'signout', to: 'sessions#destroy', as: 'signout'
+  match 'users', to: 'users#index', via: 'get'
+
+  match 'fonts/index', to: 'fonts#index', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

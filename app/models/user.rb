@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :fonts
   def self.from_omniauth(auth)
   	where(auth.slice("provider", "uid", "name", "location", "image")).first || create_from_omniauth(auth)
   end
@@ -11,5 +12,10 @@ class User < ActiveRecord::Base
   	  user.location = auth["info"]["location"]
   	  user.image = auth["info"]["image"]
   	end
-  end	  	
+  end
+
+  def bigger_image
+    self.image = omniauth['info']['image'].sub("_normal", "")
+  end  
+
 end

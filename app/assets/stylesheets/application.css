@@ -19,6 +19,16 @@
 
  /*@import font-awesome;*/
 
+ #navcontainer ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+#navcontainer ul li { display: inline; }
+#navcontainer ul li a { text-decoration: none; }
+
 #wrapper {
   padding-left: 250px;
   transition: all 0.4s ease 0s;
@@ -66,8 +76,8 @@
 
 .sidebar-nav li a:hover {
   color: #fff;
-  background: rgba(255,255,255,0.2);
-  text-decoration: none;
+  background: #4E0707;
+  text-decoration: strong;
 }
 
 .sidebar-nav li a:active,
@@ -137,8 +147,8 @@
   display: inline-block;
 }
 
-.inset {
+/*.inset {
   padding: 15px;
-}
+}*/
 
 }

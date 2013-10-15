@@ -1,0 +1,11 @@
+<h1><i class="icon-group"></i>   All Users</h1>
+<hr>
+<ul>
+  <% @user.each do |user| %>
+    <li>
+      <img src= <%=user.image %>  />    <i class="icon-user"></i>
+      <%= link_to user.name, user %>
+      <hr>
+      <% end %>
+    </li>
+</ul>

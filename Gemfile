@@ -35,6 +35,9 @@ gem 'multi_json', '~> 1.7.8'
 
 require 'pygments.rb'
 
+gem 'chartkick'
+
+gem 'angularjs-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
