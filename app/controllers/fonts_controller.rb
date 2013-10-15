@@ -4,17 +4,18 @@ class FontsController < ApplicationController
   # GET /fonts
   # GET /fonts.json
   def index
-    @fonts = Font.all
+    @font = Font.all
   end
 
   # GET /fonts/1
   # GET /fonts/1.json
   def show
+    @font = Font.find(params[:id])
   end
 
   # GET /fonts/new
   def new
-    @font = Font.new
+    @font  = current_user.fonts.build
   end
 
   # GET /fonts/1/edit
@@ -24,7 +25,8 @@ class FontsController < ApplicationController
   # POST /fonts
   # POST /fonts.json
   def create
-    @font = Font.new(font_params)
+    @font = current_user.fonts.build(font_params)
+    # @font = Font.new(font_params)
 
     respond_to do |format|
       if @font.save

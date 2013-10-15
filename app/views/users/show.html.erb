@@ -14,7 +14,7 @@
    <hr>
 <% @user.fonts.each do |f| %>
 <article>
-<p><%= link_to(f.fontnames) %></p>
+<p><%= link_to(f.fontnames, font_path(f)) %></p>
 <hr>
 </article> 
 <% end %>
