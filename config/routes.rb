@@ -1,5 +1,8 @@
 Components::Application.routes.draw do
-  resources :fonts
+  resources :fonts do 
+    member { get :like }
+  end
+
   resources :users
   root "static#home"
   get "static/home"

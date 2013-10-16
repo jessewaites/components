@@ -4,7 +4,7 @@ h1, h2 {
     line-height: 46px;
     font-size: 52px;
     margin: 0 0 23px 0;
-    margin-top: -35px;
+    margin-top: 0px;
     }
 p, b, ol, ul, td, h3  {
     font-family: 'Abel', sans-serif;
@@ -20,13 +20,15 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #202c4c;
+  text-decoration: bold;
   &:visited {
-    color: #666;
+    color: #202c4c;
+
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #4e0707;
+    background-color: #fff;
   }
 }
 

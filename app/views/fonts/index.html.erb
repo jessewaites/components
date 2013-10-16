@@ -1,12 +1,11 @@
-    <% @font.each do |font| %>
+    <% @fonts.each do |font| %>
       <article>
-        <h2><%= font.fontnames %></h2>
-        <p><%= font.description %></p>
-        <p><%= link_to 'Show', font %></p>
-        <!-- <p><%= link_to 'Edit', edit_font_path(font) %></p>
-        <p><%= link_to 'Destroy', font, method: :delete, data: { confirm: 'Are you sure?' } %></p> -->    
-    <% end %>
-  </article>
-<br>
+        <h2><%= link_to(font.fontnames, font_path(font)) %></h2><p><%= font.reputation_for(:likes).to_i %> Likes</p>
 
-<%= link_to 'New Font', new_font_path %>
+        <p><%= font.description %></p>
+        <div>
+        <p>Submitted by~ <img src = <%= font.user.image.sub("_normal", "_mini") %> /> <%= link_to font.user.name, user_path(font.user) %></p>
+        </div>
+        <hr>
+        </article>   
+    <% end %>

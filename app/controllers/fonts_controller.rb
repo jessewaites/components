@@ -1,32 +1,36 @@
 class FontsController < ApplicationController
+  load_and_authorize_resource
   #before_action :set_font, only: [:show, :edit, :update, :destroy]
 
-  # GET /fonts
-  # GET /fonts.json
   def index
-    @font = Font.all
+    @fonts = Font.find_with_reputation(:likes, :all, {:order => 'likes desc'})
   end
 
-  # GET /fonts/1
-  # GET /fonts/1.json
   def show
-    @font = Font.find(params[:id])
   end
 
-  # GET /fonts/new
+  def self.most_liked
+  find_with_reputation(:likes, :all, {:order => 'likes DESC'})
+  end
+
+  def like
+    value = params[:type] == "up" ? 1 : -1
+    @font = Font.find(params[:id])
+    @font.add_or_update_evaluation(:likes, value, current_user)
+    redirect_to :back, notice: "Thanks for voting!"
+  end  
+
   def new
     @font  = current_user.fonts.build
+    # if current_user = nil?
+    #   redirect_to root_path
+    # end  
   end
 
-  # GET /fonts/1/edit
-  def edit
-  end
 
-  # POST /fonts
-  # POST /fonts.json
   def create
     @font = current_user.fonts.build(font_params)
-    # @font = Font.new(font_params)
+
 
     respond_to do |format|
       if @font.save
@@ -39,8 +43,7 @@ class FontsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /fonts/1
-  # PATCH/PUT /fonts/1.json
+
   def update
     respond_to do |format|
       if @font.update(font_params)
@@ -53,8 +56,7 @@ class FontsController < ApplicationController
     end
   end
 
-  # DELETE /fonts/1
-  # DELETE /fonts/1.json
+
   def destroy
     @font.destroy
     respond_to do |format|
@@ -64,13 +66,9 @@ class FontsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    # def set_font
-    #   @font = Font.find(params[:id])
-    # end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def font_params
-      params.require(:font).permit(:fontnames, :description, :html, :css)
+      params.require(:font).permit!(:image)
     end
+    
 end

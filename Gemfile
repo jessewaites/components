@@ -39,6 +39,14 @@ gem 'chartkick'
 
 gem 'angularjs-rails'
 
+gem 'will_paginate', '~> 3.0.5'
+
+gem 'cancan', github: 'neubloc/cancan'
+
+gem 'carrierwave'
+
+gem 'activerecord-reputation-system', git: 'git@github.com:NARKOZ/activerecord-reputation-system.git', branch: 'rails4'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

@@ -1,4 +1,4 @@
-<%= form_for(@font) do |f| %>
+<%= form_for (@font), :html => {:multipart => true} do |f| %>
   <% if @font.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@font.errors.count, "error") %> prohibited this font from being saved:</h2>
@@ -15,11 +15,6 @@
     <%= f.label :fontnames %><br>
     <%= f.text_field :fontnames %>
   </div>
-  <div class="input-group input-group-lg">
-  <span class="input-group-addon">#</span>
-  <input type="text" class="form-control input-lg" placeholder="Username" ng-model="newEntry.boot">
-</div>
-   {{newEntry.boot}}
   <div class="input-large">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
@@ -29,14 +24,14 @@
     <%= f.text_field :html %>
   </div>
   <!-- <input type="text" class="form-control input-lg"> -->
-    <%= f.label :cssss %><br>
+   <div>
+    <%= f.label :cssss %>
     <%= f.text_area :css %>
   </div>
-
- <!--  <form name="newUserForm" ng-submit="add()" class="" novalidate>
-    <input type="text" class="input" ng-model="newUser.uname" placeholder="Twitter" required></td>
-    </form>
-    {{newUser.uname}} -->
+  <div>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
 
 
   <div class="actions">
