@@ -19,6 +19,10 @@
 
  /*@import font-awesome;*/
 
+ .badge {
+  background-color: #4e0707
+ }
+
  #navcontainer ul
 {
 margin: 0;

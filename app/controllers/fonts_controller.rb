@@ -3,7 +3,7 @@ class FontsController < ApplicationController
   #before_action :set_font, only: [:show, :edit, :update, :destroy]
 
   def index
-    @fonts = Font.find_with_reputation(:likes, :all, {:order => 'likes desc'})
+    @fonts = Font.find_with_reputation(:likes, :all, {:order => 'likes DESC'})
   end
 
   def show
@@ -22,9 +22,10 @@ class FontsController < ApplicationController
 
   def new
     @font  = current_user.fonts.build
-    # if current_user = nil?
-    #   redirect_to root_path
-    # end  
+    if current_user = nil?
+      @font = Font.all
+      redirect_to root_path
+    end
   end
 
 
@@ -67,8 +68,12 @@ class FontsController < ApplicationController
 
   private
 
+  def screenshot_params
+  params.require(:screenshot).permit(:title, :assets_attributes => [:filename, :id, :screenshot_id])
+  end
+
     def font_params
-      params.require(:font).permit!(:image)
+      params.require(:font).permit(:fontnames, :description, :html, :css, :name, :likes) 
     end
     
 end

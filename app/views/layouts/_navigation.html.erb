@@ -10,7 +10,7 @@
     <% if current_user.present? %>
     <br>
     <li><i class="icon-twitter"></i><%= link_to "Sign Out", signout_path %>
-  <li><img src= <%=current_user.image %>  />    <i class="icon-user"></i></li>
+  <li><img class="smallround" src="<%= current_user.image %>">    <i class="icon-user"></i></li>
   <li><%= link_to("View Profile", user_path(current_user)) %></li>
   <li><%= current_user.location %></li>
   <br>

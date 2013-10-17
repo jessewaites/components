@@ -1,12 +1,36 @@
-h1, h2 {
+.round {
+display: inline-block;
+position: relative;
+overflow: hidden;
+width: 300px;
+height: 300px;
+-moz-border-radius: 300px;
+border-radius: 300px;
+-webkit-border-radius: 300px;
+}
+
+.smallround {
+display: inline-block;
+position: relative;
+overflow: hidden;
+width: 45px;
+height: 45px;
+-moz-border-radius: 45px;
+border-radius: 45px;
+-webkit-border-radius: 45px;
+}
+
+
+h1, h2, h3 {
     font-family: 'Medula One', cursive;
     font-weight: normal;
     line-height: 46px;
     font-size: 52px;
     margin: 0 0 23px 0;
     margin-top: 0px;
+    color: #404c81;
     }
-p, b, ol, ul, td, h3  {
+p, b, ol, ul, td,  {
     font-family: 'Abel', sans-serif;
     font-size: 17px;
     line-height: 23px;

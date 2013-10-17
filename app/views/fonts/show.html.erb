@@ -8,34 +8,29 @@
 </head>
 
 <h1>
-  <strong><%= @font.fontnames %></strong>
+  <strong><%= @font.fontnames %></strong>&nbsp;&nbsp;<span class="badge"><b><%= @font.reputation_for(:likes).to_i %> props</span></b>  
 </h1>
+<hr>
 <!-- <p id><%= notice %></p> -->
 <p>
   <%= @font.description %>
 </p>
+<% if current_user.present? %>
+<%= link_to "Vote Up", like_font_path(@font, type: "up"), method: "GET", :class => "btn btn-success" %>&nbsp;&nbsp;<%= link_to "Vote Down", like_font_path(@font, type: "down"), method: "GET", :class => "btn btn-danger" %>
+<% end %>&nbsp;&nbsp;
+<% if can? :update, @font %>
+<%= link_to 'Edit', edit_font_path(@font), :class => "btn btn-warning" %>
+<% end %>
 
-<%= link_to "up", like_font_path(@font, type: "up"), method: "post" %> | <%= link_to "down", like_font_path(@font, type: "down"), method: "post" %>
-
-<p>Submitted by~ <img src = <%= @font.user.image.sub("_normal", "_mini") %> /> <%= link_to @font.user.name, user_path(@font.user) %></p>
+<br>
+<br>
+<p>Submitted by:&nbsp;<img class="smallround" src="<%= @font.user.image %>">&nbsp;&nbsp;<%= link_to @font.user.name, user_path(@font.user) %></p>
 <br>
 
-<%= pluralize @font.reputation_for(:likes).to_i, "like" %>
-
-<!-- <pre><span class="badge">42 </span><i class="icon-heart icon-2x"></i> ~ 5 <i class="icon-thumbs-down icon-2x"></i></pre> -->
-
-<p>
-  <strong>HTML:</strong>
+  <h2>HTML:</h2>
   <%= raw Pygments.highlight(@font.html) %>  
-</p>
 
-<p>
-  <strong>CSS:</strong>
+  <h2>CSS:</h2>
   <%= raw Pygments.highlight(@font.css) %>
-</p>
-<% if can? :update, @font %>
-<%= link_to 'Edit', edit_font_path(@font) %> |
-<% end %>
-<% if can? :destroy, @font %>
-<%= link_to 'Back', fonts_path %>
-<% end %>
+
+

@@ -1,6 +1,7 @@
+
     <% @fonts.each do |font| %>
       <article>
-        <h2><%= link_to(font.fontnames, font_path(font)) %></h2><p><%= font.reputation_for(:likes).to_i %> Likes</p>
+        <h2><%= link_to(font.fontnames, font_path(font)) %></h2><span class="badge"><b><%= font.reputation_for(:likes).to_i %> props</span></b>
 
         <p><%= font.description %></p>
         <div>

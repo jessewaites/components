@@ -33,7 +33,7 @@ gem 'omniauth-twitter'
 
 gem 'multi_json', '~> 1.7.8'
 
-require 'pygments.rb'
+gem 'pygments.rb'
 
 gem 'chartkick'
 
@@ -44,6 +44,8 @@ gem 'will_paginate', '~> 3.0.5'
 gem 'cancan', github: 'neubloc/cancan'
 
 gem 'carrierwave'
+
+gem 'ransack'
 
 gem 'activerecord-reputation-system', git: 'git@github.com:NARKOZ/activerecord-reputation-system.git', branch: 'rails4'
 
