@@ -20,7 +20,8 @@
  /*@import font-awesome;*/
 
  .badge {
-  background-color: #4e0707
+  background-color: #79D396;
+  padding: 0px 5px;
  }
 
  #navcontainer ul

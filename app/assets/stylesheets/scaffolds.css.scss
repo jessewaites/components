@@ -1,3 +1,25 @@
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height: 46px;
+    font-size: 46px;
+    margin: 0 0 23px 0;
+    }
+h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    line-height: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0 0 23px 0;
+    }
+p, b, ol, ul, td, {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    }
+
 .round {
 display: inline-block;
 position: relative;
@@ -21,21 +43,8 @@ border-radius: 45px;
 }
 
 
-h1, h2, h3 {
-    font-family: 'Medula One', cursive;
-    font-weight: normal;
-    line-height: 46px;
-    font-size: 52px;
-    margin: 0 0 23px 0;
-    margin-top: 0px;
-    color: #404c81;
-    }
-p, b, ol, ul, td,  {
-    font-family: 'Abel', sans-serif;
-    font-size: 17px;
-    line-height: 23px;
-    margin: 0 0 23px 0;
-    }
+
+
 
 pre {
   background-color: #eee;

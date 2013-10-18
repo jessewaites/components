@@ -43,9 +43,11 @@ gem 'will_paginate', '~> 3.0.5'
 
 gem 'cancan', github: 'neubloc/cancan'
 
-gem 'carrierwave'
-
 gem 'ransack'
+
+gem 'paperclip'
+
+gem 'aws-sdk'
 
 gem 'activerecord-reputation-system', git: 'git@github.com:NARKOZ/activerecord-reputation-system.git', branch: 'rails4'
 

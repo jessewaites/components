@@ -7,19 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 
-<h1>
-  <strong><%= @font.fontnames %></strong>&nbsp;&nbsp;<span class="badge"><b><%= @font.reputation_for(:likes).to_i %> props</span></b>  
-</h1>
+<h3>
+  <%=link_to image_tag("arrow2.png"), :back %>
+  <%= @font.fontnames %>&nbsp;&nbsp;<span class="badge badge-important pull-right"><b><%= @font.reputation_for(:likes).to_i %> votes</span></b>  
+</h3>
 <hr>
 <!-- <p id><%= notice %></p> -->
-<p>
+<b>
   <%= @font.description %>
-</p>
+</b>
+<br>
+<br>
 <% if current_user.present? %>
 <%= link_to "Vote Up", like_font_path(@font, type: "up"), method: "GET", :class => "btn btn-success" %>&nbsp;&nbsp;<%= link_to "Vote Down", like_font_path(@font, type: "down"), method: "GET", :class => "btn btn-danger" %>
 <% end %>&nbsp;&nbsp;
 <% if can? :update, @font %>
-<%= link_to 'Edit', edit_font_path(@font), :class => "btn btn-warning" %>
+<%= link_to 'Edit', edit_font_path(@font), :class => "btn btn-warning btn-important pull-right" %>
 <% end %>
 
 <br>
@@ -27,10 +30,10 @@
 <p>Submitted by:&nbsp;<img class="smallround" src="<%= @font.user.image %>">&nbsp;&nbsp;<%= link_to @font.user.name, user_path(@font.user) %></p>
 <br>
 
-  <h2>HTML:</h2>
+  <h2>HTML<%= image_tag("arrow1.png") %></h2>
   <%= raw Pygments.highlight(@font.html) %>  
-
-  <h2>CSS:</h2>
+<br>
+  <h2>CSS<%= image_tag("arrow1.png") %></h2>
   <%= raw Pygments.highlight(@font.css) %>
 
 

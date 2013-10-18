@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131016210041) do
+ActiveRecord::Schema.define(version: 20131016174530) do
 
   create_table "fonts", force: true do |t|
     t.string   "fontnames"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20131016210041) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.string   "image"
   end
 
   add_index "fonts", ["created_at"], name: "index_fonts_on_created_at"

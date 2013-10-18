@@ -20,12 +20,8 @@ class FontsController < ApplicationController
     redirect_to :back, notice: "Thanks for voting!"
   end  
 
-  def new
-    @font  = current_user.fonts.build
-    if current_user = nil?
-      @font = Font.all
-      redirect_to root_path
-    end
+  def new 
+      @font  = current_user.fonts.build
   end
 
 
