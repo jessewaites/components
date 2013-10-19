@@ -4,7 +4,7 @@ class Font < ActiveRecord::Base
     attr_accessible :avatar
 
   # This method associates the attribute ":avatar" with a file attachment
-  has_attached_file :avatar, styles: {
+  has_attached_file :image, styles: {
     thumb: '100x100>',
     square: '200x200#',
     medium: '800x300>'

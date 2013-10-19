@@ -16,6 +16,7 @@
 <b>
   <%= @font.description %>
 </b>
+<%= image_tag @font.image.url(:medium) %>
 <br>
 <br>
 <% if current_user.present? %>
