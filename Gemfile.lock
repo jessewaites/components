@@ -1,15 +1,15 @@
 GIT
-  remote: git://github.com/neubloc/cancan.git
-  revision: 5e2c6ecd10125d974fb1a80aff2fb4ebb43b84bf
-  specs:
-    cancan (1.6.10)
-
-GIT
-  remote: git@github.com:NARKOZ/activerecord-reputation-system.git
+  remote: git://github.com/NARKOZ/activerecord-reputation-system.git
   revision: 01197ad78cac3136317b2884b61ed3da34c607d0
   branch: rails4
   specs:
     activerecord-reputation-system (2.0.2)
+
+GIT
+  remote: git://github.com/neubloc/cancan.git
+  revision: 5e2c6ecd10125d974fb1a80aff2fb4ebb43b84bf
+  specs:
+    cancan (1.6.10)
 
 GEM
   remote: https://rubygems.org/

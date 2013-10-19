@@ -51,7 +51,7 @@ gem 'aws-sdk'
 
 gem 'protected_attributes'
 
-gem 'activerecord-reputation-system', git: 'git@github.com:NARKOZ/activerecord-reputation-system.git', branch: 'rails4'
+gem 'activerecord-reputation-system', :git => 'git://github.com/NARKOZ/activerecord-reputation-system.git', branch: 'rails4'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
