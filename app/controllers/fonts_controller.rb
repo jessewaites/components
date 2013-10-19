@@ -64,12 +64,12 @@ class FontsController < ApplicationController
 
   private
 
-  def screenshot_params
-  params.require(:screenshot).permit(:title, :assets_attributes => [:filename, :id, :screenshot_id])
+  def image_params
+  params.require(:image).permit(:title, :assets_attributes => [:filename, :id, :screenshot_id])
   end
 
     def font_params
-      params.require(:font).permit(:fontnames, :description, :html, :css, :name, :likes) 
+      params.require(:font).permit(:fontnames, :description, :html, :css, :name, :likes, :image) 
     end
     
 end
