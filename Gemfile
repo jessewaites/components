@@ -49,6 +49,8 @@ gem 'paperclip'
 
 gem 'aws-sdk'
 
+gem 'protected_attributes'
+
 gem 'activerecord-reputation-system', git: 'git@github.com:NARKOZ/activerecord-reputation-system.git', branch: 'rails4'
 
 group :doc do
