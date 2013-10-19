@@ -59,14 +59,14 @@ group :doc do
 end
 
 group :development, :test do 
+  gem 'sqlite3'
   gem 'rspec-rails', '2.13.1'
   gem 'capybara', '2.1.0'
   #gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end  
 
 group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
+  gem 'pg'
 end
 
 # Use ActiveModel has_secure_password
