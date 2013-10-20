@@ -2,8 +2,7 @@
     <% @fonts.each do |font| %>
       <article>
         <h2><%= link_to(font.fontnames, font_path(font)) %>
-        <p><%= font.description %></p>
-        
+        <p><%= font.description %></p>        
         <a href="<%= font.image.url %>" data-toggle="lightbox" data-title="<%= font.fontnames %>"><img src = <%= font.image.url %> class="img-responsive"</a>
         <br>
         <div>

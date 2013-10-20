@@ -16,7 +16,7 @@
 <br>
   <p><%= @font.description %></p>
 <br>
-<%= image_tag @font.image.url, :options => { "data-toggle" => "lightbox"} %>
+<a href="<%= @font.image.url %>" data-toggle="lightbox" data-title="<%= @font.fontnames %>"><img src = <%= @font.image.url %> class="img-responsive"</a>
 
 <br>
 <br>
