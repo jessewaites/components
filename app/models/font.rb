@@ -1,8 +1,8 @@
 class Font < ActiveRecord::Base
 	belongs_to :user
     has_reputation :likes, source: :user, aggregated_by: :sum
-    attr_accessible :image
-    
+    attr_accessible :image, :fontnames, :html, :css, :description
+
 
 
   # This method associates the attribute ":avatar" with a file attachment

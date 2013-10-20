@@ -10,7 +10,6 @@
 <h3>
   <%=link_to image_tag("arrow2.png"), :back %>
   <%= @font.fontnames %>
-  <%= link_to '<i class="icon-ok icon-white"></i> Do it'.html_safe, user_path(@user) %>
 </h3>
 <hr>
 <!-- <p id><%= notice %></p> -->
@@ -18,6 +17,7 @@
   <%= @font.description %>
 </b>
 <%= image_tag @font.image.url(:medium) %>
+
 <br>
 <br>
 <% if current_user.present? %>
@@ -38,4 +38,5 @@
   <h2>CSS<%= image_tag("arrow1.png") %></h2>
   <%= raw Pygments.highlight(@font.css) %>
 
+<%= link_to '<i class="icon-ok icon-white"></i> Do it'.html_safe, user_path(@user) %>
 
