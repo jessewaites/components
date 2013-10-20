@@ -2,9 +2,7 @@
     <% @fonts.each do |font| %>
       <article>
         <h2><%= link_to(font.fontnames, font_path(font)) %>
-
         <p><%= font.description %></p>
-        <br>
         <%= image_tag font.image.url %>
         <br>
         <div>
