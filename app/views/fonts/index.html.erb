@@ -5,7 +5,7 @@
 
         <p><%= font.description %></p>
         <br>
-        <%= image_tag @font.image.url %>
+        <%= image_tag font.image.url %>
         <br>
         <div>
         <p>Submitted by~ <img src = <%= font.user.image.sub("_normal", "_mini") %> /> <%= link_to font.user.name, user_path(font.user) %></p>
