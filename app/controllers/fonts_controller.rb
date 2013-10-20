@@ -1,5 +1,5 @@
 class FontsController < ApplicationController
-  authorize_resource
+  load_and_authorize_resource
   #before_action :set_font, only: [:show, :edit, :update, :destroy]
 
   def index
