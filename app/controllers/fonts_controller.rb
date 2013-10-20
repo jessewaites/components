@@ -69,8 +69,8 @@ class FontsController < ApplicationController
   end
 
     def font_params
-      params.require(:font).permit(:fontnames, :description, :html, :css, :name, :likes, :image)
-      # params.require(:font).permit! 
+      #params.require(:font).permit(:fontnames, :description, :html, :css, :name, :likes, :image)
+       params.require(:font).permit! 
     end
     
 end
