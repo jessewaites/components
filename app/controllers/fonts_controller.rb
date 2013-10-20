@@ -1,5 +1,5 @@
 class FontsController < ApplicationController
-  load_and_authorize_resource
+  authorize_resource
   #before_action :set_font, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -42,6 +42,7 @@ class FontsController < ApplicationController
 
 
   def update
+    @font = Font.find(params[:id])
     respond_to do |format|
       if @font.update(font_params)
         format.html { redirect_to @font, notice: 'Font was successfully updated.' }
@@ -55,6 +56,7 @@ class FontsController < ApplicationController
 
 
   def destroy
+    @font = Font.find(params[:id])
     @font.destroy
     respond_to do |format|
       format.html { redirect_to fonts_url }
