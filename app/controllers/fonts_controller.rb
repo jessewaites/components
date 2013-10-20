@@ -3,8 +3,7 @@ class FontsController < ApplicationController
   #before_action :set_font, only: [:show, :edit, :update, :destroy]
 
   def index
-    @font = Font.all
-    # @fonts = Font.find_with_reputation(:likes, :all, {:order => 'likes DESC'})
+    @fonts = Font.find_with_reputation(:likes, :all, {:order => 'likes DESC'})
   end
 
   def show
