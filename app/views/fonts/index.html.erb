@@ -3,10 +3,11 @@
       <article>
         <h2><%= link_to(font.fontnames, font_path(font)) %>
         <p><%= font.description %></p>
-        <%= link_to image_tag font.image.url, :data => {:toggle=>"lightbox"} %>
+        
+        <a href="<%= font.image.url %>" data-toggle="lightbox" data-title="<%= font.fontnames %>"><img src = <%= font.image.url class="img-responsive"</a>
         <br>
         <div>
-        <p>Submitted by~ <img src = <%= font.user.image.sub("_normal", "_mini") %> /> <%= link_to font.user.name, user_path(font.user) %></p>
+        <p>Submitted by  <img src = <%= font.user.image.sub("_normal", "_mini") %> /> <%= link_to font.user.name, user_path(font.user) %></p>
         </div>
         <hr>
         </article>   
