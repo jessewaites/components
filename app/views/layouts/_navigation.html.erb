@@ -4,7 +4,7 @@
     <li><a href="#"><%= link_to "Font Index", fonts_path %></a></li>
     <li><%= link_to "Users", users_path %></li>
     <li><a href="#">Resources</a></li>
-    <li><a href="#">About</a></li>          
+    <li><%= link_to "About", static_about_path %></li>          
     <li><a href="#">Contact</a></li>
     <br> 
     <% if current_user.present? %>
@@ -14,7 +14,7 @@
   <li><%= link_to("View Profile", user_path(current_user)) %></li>
   <li><%= current_user.location %></li>
   <br>
-  <li><a href="#">Submit</a></li> 
+  <li><%= link_to "Submit", new_font_path %></li> 
   <% else %>
   <br>
   <li><i class="icon-twitter"></i><%= link_to "Sign In", "/auth/twitter" %></li>
